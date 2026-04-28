@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Generator Quote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="quote-card">
+        <div class="header">
+            <h1>Generator Quote</h1>
+            <p>Kutipan inspiratif untuk harimu</p>
+        </div>
+
+        <div class="quote-display" id="quoteDisplay">
+            <div class="quote-icon">“</div>
+            <div class="quote-text" id="quoteText">
+                Klik tombol di bawah untuk mendapatkan kutipan inspiratif
+            </div>
+            <div class="quote-author" id="quoteAuthor">- Siapakah? -</div>
+        </div>
+
+        <div class="category-section">
+            <label>📂 Kategori:</label>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Semua</button>
+                <button class="category-btn" data-category="motivation">Motivasi</button>
+                <button class="category-btn" data-category="life">Kehidupan</button>
+                <button class="category-btn" data-category="success">Sukses</button>
+                <button class="category-btn" data-category="love">Cinta</button>
+                <button class="category-btn" data-category="wisdom">Kebijaksanaan</button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="newQuoteBtn" class="primary-btn">🎲 Quote Baru</button>
+            <button id="tweetBtn" class="secondary-btn">🐦 Bagikan ke Twitter</button>
+        </div>
+
+        <div class="stats">
+            <span>📚 Total Kutipan: <strong id="totalQuotes">0</strong></span>
+            <span>🎯 Kategori: <strong id="currentCategory">Semua</strong></span>
+        </div>
+
+        <div class="footer-note">
+            <span>✨ Klik "Quote Baru" atau tekan spasi untuk kutipan baru</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="bmi-card">
+        <div class="header">
+            <h1>⚖️ Kalkulator BMI</h1>
+            <p>Hitung Indeks Massa Tubuh Anda</p>
+        </div>
+
+        <div class="unit-toggle">
+            <button id="metricBtn" class="unit-btn active">📏 Metrik (kg/cm)</button>
+            <button id="imperialBtn" class="unit-btn">🏋️ Imperial (lb/in)</button>
+        </div>
+
+        <!-- Metrik Unit -->
+        <div id="metricInputs" class="input-section">
+            <div class="input-group">
+                <label for="weightKg">⚡ Berat Badan</label>
+                <div class="input-wrapper">
+                    <input type="number" id="weightKg" placeholder="70" value="70" step="0.5">
+                    <span class="unit-label">kg</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="heightCm">📏 Tinggi Badan</label>
+                <div class="input-wrapper">
+                    <input type="number" id="heightCm" placeholder="170" value="170" step="0.5">
+                    <span class="unit-label">cm</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imperial Unit (hidden by default) -->
+        <div id="imperialInputs" class="input-section hidden">
+            <div class="input-group">
+                <label for="weightLb">⚡ Berat Badan</label>
+                <div class="input-wrapper">
+                    <input type="number" id="weightLb" placeholder="154" value="154" step="0.5">
+                    <span class="unit-label">lb</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="heightIn">📏 Tinggi Badan</label>
+                <div class="input-wrapper">
+                    <input type="number" id="heightIn" placeholder="67" value="67" step="0.5">
+                    <span class="unit-label">in</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="calculateBtn" class="calculate-btn">🔢 Hitung BMI</button>
+
+        <div id="resultSection" class="result-section hidden">
+            <div class="bmi-display">
+                <div class="bmi-value">
+                    <span id="bmiValue">--</span>
+                </div>
+                <div class="bmi-status" id="bmiStatus">--</div>
+            </div>
+
+            <div class="bmi-scale">
+                <div class="scale-bar">
+                    <div class="scale-fill" id="scaleFill"></div>
+                </div>
+                <div class="scale-labels">
+                    <span>Kurus</span>
+                    <span>Normal</span>
+                    <span>Berlebih</span>
+                    <span>Obesitas</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-item">
+                    <span>📊 BMI Anda:</span>
+                    <strong id="bmiValueDetail">--</strong>
+                </div>
+                <div class="info-item">
+                    <span>🏷️ Kategori:</span>
+                    <strong id="categoryDetail">--</strong>
+                </div>
+                <div class="info-item">
+                    <span>⚖️ Berat Ideal:</span>
+                    <strong id="idealWeight">-- kg</strong>
+                </div>
+            </div>
+
+            <div class="recommendation" id="recommendation">
+                <p id="recommendationText">Hasil perhitungan akan muncul di sini</p>
+            </div>
+        </div>
+
+        <div class="info-table">
+            <h3>📋 Klasifikasi BMI (WHO)</h3>
+            <div class="table">
+                <div class="table-row">
+                    <span>Kurus</span>
+                    <span>&lt; 18.5</span>
+                </div>
+                <div class="table-row">
+                    <span>Normal</span>
+                    <span>18.5 - 24.9</span>
+                </div>
+                <div class="table-row">
+                    <span>Berlebih</span>
+                    <span>25 - 29.9</span>
+                </div>
+                <div class="table-row">
+                    <span>Obesitas</span>
+                    <span>≥ 30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <span>✨ BMI = berat (kg) / (tinggi (m)²)</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

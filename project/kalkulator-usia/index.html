@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kalkulator Usia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="calculator-card">
+        <div class="header">
+            <h1>🎂 Kalkulator Usia</h1>
+            <p>Hitung usia Anda secara akurat</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="birthDate">📅 Tanggal Lahir</label>
+                <input type="date" id="birthDate" value="2000-01-01">
+            </div>
+
+            <div class="input-group">
+                <label for="targetDate">📅 Tanggal Target</label>
+                <input type="date" id="targetDate">
+                <small class="input-hint">Kosongkan untuk menggunakan hari ini</small>
+            </div>
+
+            <button id="calculateBtn" class="calculate-btn">🔢 Hitung Usia</button>
+        </div>
+
+        <div id="resultSection" class="result-section">
+            <div class="age-display">
+                <div class="age-years">
+                    <span class="age-number" id="years">0</span>
+                    <span class="age-label">Tahun</span>
+                </div>
+                <div class="age-months">
+                    <span class="age-number" id="months">0</span>
+                    <span class="age-label">Bulan</span>
+                </div>
+                <div class="age-days">
+                    <span class="age-number" id="days">0</span>
+                    <span class="age-label">Hari</span>
+                </div>
+            </div>
+
+            <div class="total-days">
+                <span>📆 Total usia:</span>
+                <strong id="totalDays">0</strong>
+                <span>hari</span>
+            </div>
+
+            <div class="precise-age">
+                <h3>🎯 Usia Presisi</h3>
+                <div class="precise-detail" id="preciseAge">0 tahun 0 bulan 0 hari</div>
+            </div>
+
+            <div class="next-birthday">
+                <div class="birthday-card">
+                    <span>🎉 Ulang Tahun Berikutnya</span>
+                    <strong id="nextBirthday">--</strong>
+                    <span id="daysToBirthday">-- hari lagi</span>
+                </div>
+            </div>
+
+            <div class="live-counter">
+                <h3>⏱️ Usia Real-time</h3>
+                <div class="live-detail" id="liveAge">-- tahun -- bulan -- hari -- jam -- menit -- detik</div>
+                <small>Update setiap detik</small>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <span>✨ Perhitungan akurat termasuk tahun kabisat</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

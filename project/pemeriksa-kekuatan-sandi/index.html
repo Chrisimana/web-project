@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemeriksa Kekuatan Sandi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <div class="icon"><i class="fas fa-lock"></i></div>
+            <h1>Pemeriksa Kekuatan <span>Sandi</span></h1>
+            <p>Masukkan password untuk mengetahui tingkat kekuatannya</p>
+        </div>
+
+        <div class="input-group">
+            <div class="password-wrapper">
+                <input type="password" id="passwordInput" placeholder="Masukkan password Anda..." autocomplete="off">
+                <button type="button" id="toggleVisibility" class="toggle-btn" aria-label="Tampilkan/Sembunyikan password">
+                    <i class="far fa-eye" id="toggleIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Strength Meter -->
+        <div class="strength-section">
+            <div class="strength-meter">
+                <div class="meter-fill" id="meterFill"></div>
+            </div>
+            <div class="strength-label" id="strengthLabel">
+                <span id="strengthText">Belum ada password</span>
+            </div>
+        </div>
+
+        <!-- Detail kriteria -->
+        <div class="criteria-list" id="criteriaList">
+            <div class="criteria-item" data-criteria="length">
+                <span class="criteria-icon"><i class="far fa-circle"></i></span>
+                <span>Minimal 8 karakter</span>
+            </div>
+            <div class="criteria-item" data-criteria="uppercase">
+                <span class="criteria-icon"><i class="far fa-circle"></i></span>
+                <span>Huruf besar (A-Z)</span>
+            </div>
+            <div class="criteria-item" data-criteria="lowercase">
+                <span class="criteria-icon"><i class="far fa-circle"></i></span>
+                <span>Huruf kecil (a-z)</span>
+            </div>
+            <div class="criteria-item" data-criteria="number">
+                <span class="criteria-icon"><i class="far fa-circle"></i></span>
+                <span>Angka (0-9)</span>
+            </div>
+            <div class="criteria-item" data-criteria="special">
+                <span class="criteria-icon"><i class="far fa-circle"></i></span>
+                <span>Karakter khusus (!@#$%^&* dll)</span>
+            </div>
+        </div>
+
+        <!-- Info keamanan tambahan -->
+        <div class="info-panel" id="infoPanel">
+            <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="info-text" id="infoText">
+                Password yang kuat membantu melindungi akun Anda dari peretasan.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

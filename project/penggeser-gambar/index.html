@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Penggeser Gambar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="slider-wrapper">
+        <div class="slider-header">
+            <h1>🖼️ Penggeser Gambar</h1>
+            <p>Gallery Slider | Tema Ocean Breeze</p>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="https://picsum.photos/id/101/800/500" alt="Landscape 1">
+                    <div class="slide-caption">🏔️ Mountain View</div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/id/104/800/500" alt="Landscape 2">
+                    <div class="slide-caption">🏞️ Beautiful Lake</div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/id/106/800/500" alt="Landscape 3">
+                    <div class="slide-caption">🌸 Flower Field</div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/id/15/800/500" alt="Landscape 4">
+                    <div class="slide-caption">🍃 Forest Path</div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/id/96/800/500" alt="Landscape 5">
+                    <div class="slide-caption">⛰️ Majestic Peak</div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/id/169/800/500" alt="Landscape 6">
+                    <div class="slide-caption">🌅 Sunset Horizon</div>
+                </div>
+            </div>
+
+            <button class="slider-btn prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="slider-controls">
+            <div class="dots-container" id="dotsContainer"></div>
+        </div>
+
+        <div class="slider-info">
+            <span id="slideCounter">1 / 6</span>
+            <button id="autoPlayBtn" class="auto-play-btn">⏸️ Auto</button>
+        </div>
+
+        <div class="footer-note">
+            <span>Klik panah untuk navigasi</span>
+        </div>
+    </div>
+</div>
+
+<!-- Font Awesome untuk icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="script.js"></script>
+</body>
+</html>

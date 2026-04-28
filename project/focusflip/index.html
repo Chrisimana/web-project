@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="../../index.html" class="back-button">← Kembali</a>
+  <div class="app-shell">
+    <header class="hero-bar">
+      <div>
+        <p class="eyebrow">FocusFlip</p>
+        <h1>Pomodoro modern untuk kerja fokus.</h1>
+        <p class="hero-copy">Timer custom, progress animasi, statistik otomatis, notifikasi & mode fokus fullscreen.</p>
+      </div>
+      <button class="focus-mode-btn" id="focusModeBtn" type="button">Mode Fokus</button>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel timer-panel">
+        <div class="card timer-card">
+          <div class="timer-meta">
+            <span id="cycleLabel">Focus</span>
+            <span class="session-badge">Sesi ke <strong id="sessionCount">1</strong></span>
+          </div>
+
+          <div class="progress-ring" aria-label="Timer progress">
+            <svg viewBox="0 0 240 240" class="progress-svg">
+              <circle class="ring-bg" cx="120" cy="120" r="104" />
+              <circle class="ring-progress" cx="120" cy="120" r="104" id="progressCircle" />
+            </svg>
+            <div class="timer-display">
+              <strong id="minutes">25</strong>
+              <span>:</span>
+              <strong id="seconds">00</strong>
+            </div>
+          </div>
+
+          <div class="timer-controls">
+            <button id="startPauseBtn" class="btn solid">Mulai</button>
+            <button id="resetBtn" class="btn ghost">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel settings-panel">
+        <div class="card settings-card">
+          <h2>Pengaturan Waktu</h2>
+          <div class="setting-row">
+            <label for="focusDuration">Fokus</label>
+            <div class="input-group">
+              <input id="focusDuration" type="number" min="1" max="90" step="1" />
+              <span>menit</span>
+            </div>
+          </div>
+          <div class="setting-row">
+            <label for="shortBreakDuration">Istirahat pendek</label>
+            <div class="input-group">
+              <input id="shortBreakDuration" type="number" min="1" max="30" step="1" />
+              <span>menit</span>
+            </div>
+          </div>
+          <div class="setting-row">
+            <label for="longBreakDuration">Istirahat panjang</label>
+            <div class="input-group">
+              <input id="longBreakDuration" type="number" min="5" max="60" step="1" />
+              <span>menit</span>
+            </div>
+          </div>
+          <div class="setting-row">
+            <label for="cyclesUntilLong">Sesi sampai istirahat panjang</label>
+            <div class="input-group">
+              <input id="cyclesUntilLong" type="number" min="2" max="8" step="1" />
+              <span>sesi</span>
+            </div>
+          </div>
+          <div class="setting-note">Perubahan disimpan otomatis.</div>
+        </div>
+      </section>
+
+      <section class="panel stats-panel">
+        <div class="card stats-card">
+          <h2>Statistik Sesi</h2>
+          <div class="stats-grid">
+            <div>
+              <span>Total sesi fokus</span>
+              <strong id="totalSessions">0</strong>
+            </div>
+            <div>
+              <span>Menit fokus</span>
+              <strong id="totalMinutes">0</strong>
+            </div>
+            <div>
+              <span>Hari ini</span>
+              <strong id="todayMinutes">0</strong>
+            </div>
+            <div>
+              <span>Sesi berurutan</span>
+              <strong id="currentStreak">0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Konverter Mata Uang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="converter-card">
+        <div class="header">
+            <h1>💱 Konverter Mata Uang</h1>
+            <p>Kurs real-time, gratis tanpa API key</p>
+        </div>
+
+        <div class="amount-section">
+            <label for="amount">💰 Jumlah</label>
+            <input type="number" id="amount" value="100" step="any" placeholder="Masukkan jumlah">
+        </div>
+
+        <div class="currency-section">
+            <div class="currency-box">
+                <label>📤 Dari</label>
+                <div class="currency-select-wrapper">
+                    <select id="fromCurrency">
+                        <option value="USD">USD - Dolar AS</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - Pound Sterling</option>
+                        <option value="JPY">JPY - Yen Jepang</option>
+                        <option value="IDR" selected>IDR - Rupiah Indonesia</option>
+                        <option value="SGD">SGD - Dolar Singapura</option>
+                        <option value="MYR">MYR - Ringgit Malaysia</option>
+                        <option value="THB">THB - Baht Thailand</option>
+                        <option value="CNY">CNY - Yuan China</option>
+                        <option value="INR">INR - Rupee India</option>
+                        <option value="AUD">AUD - Dolar Australia</option>
+                        <option value="CAD">CAD - Dolar Kanada</option>
+                        <option value="CHF">CHF - Franc Swiss</option>
+                        <option value="KRW">KRW - Won Korea</option>
+                        <option value="SAR">SAR - Riyal Saudi</option>
+                        <option value="AED">AED - Dirham UAE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="swap-icon" id="swapBtn">
+                <span>🔄</span>
+            </div>
+
+            <div class="currency-box">
+                <label>📥 Ke</label>
+                <div class="currency-select-wrapper">
+                    <select id="toCurrency">
+                        <option value="USD" selected>USD - Dolar AS</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - Pound Sterling</option>
+                        <option value="JPY">JPY - Yen Jepang</option>
+                        <option value="IDR">IDR - Rupiah Indonesia</option>
+                        <option value="SGD">SGD - Dolar Singapura</option>
+                        <option value="MYR">MYR - Ringgit Malaysia</option>
+                        <option value="THB">THB - Baht Thailand</option>
+                        <option value="CNY">CNY - Yuan China</option>
+                        <option value="INR">INR - Rupee India</option>
+                        <option value="AUD">AUD - Dolar Australia</option>
+                        <option value="CAD">CAD - Dolar Kanada</option>
+                        <option value="CHF">CHF - Franc Swiss</option>
+                        <option value="KRW">KRW - Won Korea</option>
+                        <option value="SAR">SAR - Riyal Saudi</option>
+                        <option value="AED">AED - Dirham UAE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button id="convertBtn" class="convert-btn">💱 Konversi</button>
+
+        <div id="resultSection" class="result-section">
+            <div class="result-card">
+                <div class="result-value" id="resultValue">--</div>
+                <div class="result-rate" id="resultRate">Loading kurs...</div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="last-update" id="lastUpdate">
+                <span>📅 Update kurs: </span>
+                <span id="updateTime">--</span>
+            </div>
+            <div class="popular-rates">
+                <span>⭐ Kurs populer:</span>
+                <div class="rate-chips" id="rateChips">
+                    <span>1 USD → IDR: --</span>
+                    <span>1 EUR → IDR: --</span>
+                    <span>1 SGD → IDR: --</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <span>✨ Data kurs dari Frankfurter API (update harian, gratis)</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

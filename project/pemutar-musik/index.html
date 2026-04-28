@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pemutar Musik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+
+<div class="container">
+    <div class="music-player">
+        <div class="player-header">
+            <h1>🎵 Pemutar Musik</h1>
+            <p>Enjoy Your Music</p>
+        </div>
+
+        <div class="album-art">
+            <img id="albumArt" src="https://placehold.co/400x400/1a1a2e/ec4899?text=Neon+Music" alt="Album Art">
+            <div class="vinyl-effect"></div>
+        </div>
+
+        <div class="song-info">
+            <h2 id="songTitle">Neon Dreams</h2>
+            <p id="songArtist">Electric Universe</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="shuffleBtn" class="control-btn" title="Shuffle"><i class="fas fa-random"></i></button>
+            <button id="prevBtn" class="control-btn" title="Previous"><i class="fas fa-backward-step"></i></button>
+            <button id="playPauseBtn" class="control-btn play-btn" title="Play/Pause"><i class="fas fa-play"></i></button>
+            <button id="nextBtn" class="control-btn" title="Next"><i class="fas fa-forward-step"></i></button>
+            <button id="repeatBtn" class="control-btn" title="Repeat"><i class="fas fa-repeat"></i></button>
+        </div>
+
+        <div class="volume-container">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volumeSlider" min="0" max="100" value="70" class="volume-slider">
+            <span id="volumePercent">70%</span>
+        </div>
+
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <span>📋 Playlist</span>
+                <button id="togglePlaylistBtn" class="toggle-playlist">▼</button>
+            </div>
+            <ul id="playlist" class="playlist">
+                <!-- Playlist akan diisi oleh JavaScript -->
+            </ul>
+        </div>
+
+        <div class="footer-note">
+            <span>✨ Neon Music Player | Vol. 1</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

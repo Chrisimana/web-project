@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Kembali</a>
+    
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>⏱️ Stopwatch</h1>
+                <p class="subtitle">Alat ukur waktu yang presisi</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Timer Display -->
+            <div class="timer-section">
+                <div class="timer-display">
+                    <div class="time-parts">
+                        <div class="time-group">
+                            <span id="minutes" class="time-value">00</span>
+                            <span class="time-label">MIN</span>
+                        </div>
+                        <span class="time-separator">:</span>
+                        <div class="time-group">
+                            <span id="seconds" class="time-value">00</span>
+                            <span class="time-label">SEC</span>
+                        </div>
+                        <span class="time-separator">:</span>
+                        <div class="time-group">
+                            <span id="milliseconds" class="time-value ms-value">00</span>
+                            <span class="time-label">MS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Badge -->
+                <div class="status-badge" id="statusBadge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Berhenti</span>
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary" title="Space atau Enter">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">Mulai</span>
+                </button>
+                <button id="pauseBtn" class="btn btn-secondary" disabled title="Space atau Pause">
+                    <span class="btn-icon">⏸</span>
+                    <span class="btn-text">Jeda</span>
+                </button>
+                <button id="lapBtn" class="btn btn-accent" disabled title="L">
+                    <span class="btn-icon">🏁</span>
+                    <span class="btn-text">Lap</span>
+                </button>
+                <button id="resetBtn" class="btn btn-danger" title="R">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Reset</span>
+                </button>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-label">Total Laps</span>
+                    <span class="stat-value" id="lapCount">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Fastest Lap</span>
+                    <span class="stat-value" id="fastestLap">--:--:--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Avg Lap Time</span>
+                    <span class="stat-value" id="avgLapTime">--:--:--</span>
+                </div>
+            </div>
+
+            <!-- Laps List -->
+            <div class="laps-section">
+                <div class="laps-header">
+                    <h2>📋 Lap Records</h2>
+                    <div class="laps-actions">
+                        <button id="exportBtn" class="btn-small" title="Export ke CSV">
+                            💾 Export
+                        </button>
+                        <button id="clearLapsBtn" class="btn-small" title="Hapus semua laps" disabled>
+                            🗑️ Hapus
+                        </button>
+                    </div>
+                </div>
+                <div class="laps-list" id="lapsList">
+                    <div class="empty-state">
+                        <p>Tidak ada lap records. Mulai stopwatch dan tekan Lap! 🚀</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keyboard Shortcuts Info -->
+            <div class="shortcuts-info">
+                <p class="shortcuts-title">⌨️ Keyboard Shortcuts:</p>
+                <div class="shortcuts-grid">
+                    <span><kbd>Space</kbd> / <kbd>Enter</kbd> - Start/Pause</span>
+                    <span><kbd>L</kbd> - Lap</span>
+                    <span><kbd>R</kbd> - Reset</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

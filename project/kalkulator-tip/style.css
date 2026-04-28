@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+.back-button:active {
+    transform: translateX(-2px);
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #66ea6a 0%, #4b95a2 100%);
+    font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.calculator-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 32px;
+    padding: 30px 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    font-size: 1.9rem;
+    background: linear-gradient(135deg, #66ea6a, #4b95a2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: #37513c;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #37513c;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    position: absolute;
+    left: 16px;
+    font-weight: 700;
+    color: #37513c;
+    font-size: 1.1rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    font-size: 1.1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.2s;
+    background: #f9fafb;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #66ea6a;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.tip-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.tip-btn {
+    flex: 1;
+    min-width: 65px;
+    padding: 12px 8px;
+    border: 2px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #37513c;
+}
+
+.tip-btn:hover {
+    background: #eef2ff;
+    border-color: #66ea6a;
+    transform: translateY(-2px);
+}
+
+.tip-btn.active {
+    background: linear-gradient(135deg, #66ea6a, #4b95a2);
+    border-color: #66ea6a;
+    color: white;
+    box-shadow: 0 4px 12px rgba(75, 162, 127, 0.3);
+}
+
+.custom-tip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9fafb;
+    padding: 10px 16px;
+    border-radius: 60px;
+    border: 1px solid #e5e7eb;
+}
+
+.custom-tip span {
+    color: #37513c;
+    font-weight: 500;
+}
+
+.custom-tip input {
+    width: 90px;
+    padding: 8px 12px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: white;
+}
+
+.custom-tip input:focus {
+    outline: none;
+    border-color: #66ea6a;
+}
+
+.people-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9fafb;
+    padding: 5px 15px;
+    border-radius: 60px;
+    border: 1px solid #e5e7eb;
+    width: fit-content;
+}
+
+.people-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #66ea6a;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.people-btn:hover {
+    background: #66ea6a;
+    color: white;
+    transform: scale(1.02);
+}
+
+#peopleCount {
+    width: 70px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+}
+
+#peopleCount:focus {
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0;
+    margin: 0;
+}
+
+.result-section {
+    margin-top: 28px;
+}
+
+.result-card {
+    background: linear-gradient(145deg, #f3f4f6, #ffffff);
+    border-radius: 28px;
+    padding: 22px 20px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02), 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-label span {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1f3729;
+}
+
+.result-label small {
+    display: block;
+    font-size: 0.7rem;
+    color: #37513c;
+    margin-top: 2px;
+}
+
+.result-value {
+    font-weight: 800;
+    font-size: 1.45rem;
+    color: #37513c;
+    letter-spacing: -0.3px;
+}
+
+.total-bill {
+    font-size: 1.5rem;
+    color: #66ea6a;
+}
+
+.per-person {
+    color: #059669;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #059669, #10b981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, #e5e7eb, transparent);
+    margin: 18px 0;
+}
+
+.highlight {
+    background: #f0fdf4;
+    margin: -8px -8px 0 -8px;
+    padding: 16px 20px;
+    border-radius: 24px;
+}
+
+.info-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #9ca3af;
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 20px 18px;
+    }
+    
+    .tip-btn {
+        min-width: 55px;
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+    
+    .result-value {
+        font-size: 1.2rem;
+    }
+    
+    .per-person {
+        font-size: 1.5rem;
+    }
+}
